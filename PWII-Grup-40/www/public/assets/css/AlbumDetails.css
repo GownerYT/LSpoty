@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #4CAF50, #8BC34A);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    transition: background 0.5s ease-in-out;
+}
+
+header {
+    background-color: #333;
+    padding: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 5px solid #333;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+main {
+    flex: 1;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 20px auto 40px auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.album-info {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.album-cover {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.album-meta {
+    flex: 1;
+}
+
+.album-meta h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.album-meta p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.album-meta a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.album-meta a:hover {
+    text-decoration: underline;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff !important;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #45a049;
+}
+
+.no-download {
+    font-style: italic;
+    color: #888;
+    margin-top: 10px;
+}
+
+.track-list h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.track-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.track-list li {
+    padding: 12px 16px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.track-list li:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.playlist-form select {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.playlist-form select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(0, 128, 0, 0.3);
+}
+
+.playlist-form label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.add-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin-top: auto;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffcc00;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .album-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .album-cover {
+        width: 200px;
+        height: 200px;
+    }
+
+    .album-meta {
+        text-align: center;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+.nav-link.language-switch {
+    font-size: 16px;
+    opacity: 0.9;
+}
