@@ -14,4 +14,4 @@ Al almacenar un listado de reproducción, el sistema reemplaza los metadatos del
 
 # Ejecucción del proyecto
 
-Para ejecutar el proyecto, vaya a la carpeta PWII-Grup-40 y ejecute el comando **docker compose up -d**, seguido de **docker compose exec app composer install** y luego **docker compose exec app php spark migrate**. Una vez hecho esto, se creará un contenedor en docker y se podrá acceder a la página web desde el puerto indicado en nginx.
+Para ejecutar el proyecto, vaya a la carpeta PWII-Grup-40 añade archivos .env usando las configuraciones de .env.example tanto en el root de PWII-Grup-40 como en la carpeta www. Después, ejecuta el comando **docker compose up -d --build** en la carpeta PWII-Grup-40. Una vez hecho esto, se creará un contenedor en docker y se podrá acceder a la página web desde el puerto indicado en nginx.
